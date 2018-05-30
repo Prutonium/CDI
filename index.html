@@ -1,6 +1,7 @@
 <html>
 <head>
-
+	<title> CDI Production Map </title>
+	
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
    crossorigin=""/>
@@ -24,7 +25,7 @@
 </head>
 <body>
 	
-<div id="map"></div>
+<div id='map'></div>
 	
 <script>
 
@@ -65,8 +66,9 @@
 	var BaseLayers = {
 		"Streets": streets,
 		"Greyscale": grayscale
-		
-	var Products = {
+	};
+	
+	var overlays = {
 		"Styrene" : Styrene
 	};
 
@@ -92,7 +94,7 @@
 
 	var popup = L.popup();
 */	
-	L.control.layers(BaseLayers, Products).addTo(map);
+	L.control.layers(baseLayers, overlays).addTo(map);
 	
 </script>
 
