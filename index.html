@@ -46,6 +46,11 @@
 	
 	L.marker([30.183504, -93.355829]).bindPopup("<b>Westlake Styrene Corp. </b><br />Styrene Plant, Lake Charles <br /> 580 MM LBS ").addTo(Styrene);
 	
+/*PS Plants Here*/
+	var PS = L.layerGroup();
+
+	L.marker([32, -91]).bindPopup("<b>Company</b><br />Polystyrene Plant, example <br /> 0000 MM LBS ").addTo(PS),
+	
 	
 /* Sets Map to see Center of U.S. with zoom of 4 */
 	
@@ -69,7 +74,8 @@
 	};
 	
 	var overlays = {
-		"Styrene" : Styrene
+		"Styrene" : Styrene,
+		"Polystyrene" : PS
 	};
 
 /*	L.marker([37.0902, -95.7129]).addTo(mymap)
