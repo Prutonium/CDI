@@ -29,14 +29,25 @@
 	
 <script>
 
-
+	var plantIcon = L.Icon.extend({
+		options: {
+			iconSize:     [38, 95],
+			shadowSize:   [50, 64],
+			iconAnchor:   [22, 94],
+			shadowAnchor: [4, 62],
+			popupAnchor:  [-3, -76]
+		}
+	});
+	
+	var ActiveIcon = new plantIcon({iconUrl: 'plantformap.png'}),
+	    OutageIcon = new plantIcon({iconUrl: 'outtage.png'});
 	
 /*SM Plants Here*/
 	var Styrene = L.layerGroup();
 
-	L.marker([30.079820, -90.913910]).bindPopup("<b>Americas Styrenics</b><br />Styrene Plant, St. James <br /> 2315 MM LBS ").addTo(Styrene),
+	L.marker([30.079820, -90.913910], {icon: ActiveIcon}).bindPopup("<b>Americas Styrenics</b><br />Styrene Plant, St. James <br /> 2315 MM LBS ").addTo(Styrene),
 	
-	L.marker([30.219415, -91.072066]).bindPopup("<b>Cos-Mar</b><br />Styrene Plant, Carville <br /> 2620 MM LBS ").addTo(Styrene),
+	L.marker([30.219415, -91.072066], {icon: OutageIcon}).bindPopup("<b>Cos-Mar</b><br />Styrene Plant, Carville <br /> 2620 MM LBS ").addTo(Styrene),
 	
 	L.marker([29.359321, -94.929242]).bindPopup("<b>Ineos Styrolution</b><br />Styrene Plant, Texas City <br /> 1100 MM LBS ").addTo(Styrene),
 	
@@ -101,6 +112,12 @@
 	var popup = L.popup();
 */	
 	L.control.layers(baseLayers, overlays).addTo(map);
+
+	
+	
+	
+	
+	
 	
 </script>
 
