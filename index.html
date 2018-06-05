@@ -47,9 +47,9 @@
 /*SM Plants Here*/
 	var Styrene = L.layerGroup();
 
-	L.marker([30.079820, -90.913910], {icon: ActiveIcon}).bindPopup("<b>Americas Styrenics</b><br />Styrene Plant, St. James <br /> 2315 MM LBS ").addTo(Styrene),
+	L.marker([30.079820, -90.913910]).bindPopup("<b>Americas Styrenics</b><br />Styrene Plant, St. James <br /> 2315 MM LBS ").addTo(Styrene),
 	
-	L.marker([30.219415, -91.072066], {icon: OutageIcon}).bindPopup("<b>Cos-Mar</b><br />Styrene Plant, Carville <br /> 2620 MM LBS ").addTo(Styrene),
+	L.marker([30.219415, -91.072066]).bindPopup("<b>Cos-Mar</b><br />Styrene Plant, Carville <br /> 2620 MM LBS ").addTo(Styrene),
 	
 	L.marker([29.359321, -94.929242]).bindPopup("<b>Ineos Styrolution</b><br />Styrene Plant, Texas City <br /> 1100 MM LBS ").addTo(Styrene),
 	
@@ -59,11 +59,15 @@
 	
 	L.marker([30.183504, -93.355829]).bindPopup("<b>Westlake Styrene Corp. </b><br />Styrene Plant, Lake Charles <br /> 580 MM LBS ").addTo(Styrene);
 	
-/*PS Plants Here*/
-	var PS = L.layerGroup();
+/*ABS Plants Here*/
+	var ABS = L.layerGroup();
 
-	L.marker([32, -91]).bindPopup("<b>Company</b><br />Polystyrene Plant, example <br /> 0000 MM LBS ").addTo(PS);
+	L.marker([39.149247, -84.741864], , {icon: ActiveIcon}).bindPopup("<b>Ineos Styrolution</b><br />ABS Plant <br /> Addyston, OH <br /> 420 MM LBS ").addTo(ABS);
+	L.marker([22.418370, -97.885148], , {icon: OutageIcon}).bindPopup("<b>Ineos Styrolution</b><br />ABS Plant <br /> Altamira, Mexico <br /> 210 MM LBS ").addTo(ABS);
 	
+	
+/*PS Plants Here*/
+	var ABS = L.layerGroup();	
 	
 /* Sets Map to see Center of U.S. with zoom of 4 */
 	
@@ -88,6 +92,7 @@
 	
 	var overlays = {
 		"Styrene" : Styrene,
+		"ABS" : ABS,
 		"Polystyrene" : PS
 	};
 
