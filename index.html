@@ -97,9 +97,10 @@
 	    streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
 	
 	var map = L.map('map', {
-			  center: [37.0902, -95.7129],
-			  zoom: 4,
-			  layers: [streets]
+		crs: L.CRS.EPSG4326,
+		center: [37.0902, -95.7129],
+		zoom: 4,
+		layers: [streets]
 	});
 	
 	var baseLayers = {
