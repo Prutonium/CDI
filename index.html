@@ -89,7 +89,7 @@
 	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
 	    streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr}),
 	    Florence = L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WMSServer?request=GetCapabilities&service=WMS', {
-		    layers:'1',
+		    layers:'3',
 		    format: 'image/jpg',
 		    transparent: true,
 		    attribution: 'nowCOAST'
