@@ -88,7 +88,7 @@
 	
 
 	
-	var Florence = L.nonTileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WMSServer?request=GetCapabilities&service=WMS', {
+	var Florence = L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WMSServer?request=GetCapabilities&service=WMS', {
 		    layers:'3',
 		    attribution: 'nowCOAST'
 	    });
@@ -105,7 +105,7 @@
 	var baseLayers = {
 		"Streets": streets,
 		"Greyscale": grayscale,
-		/*"Storms": Florence*/
+		"Storms": Florence
 	};
 	
 	var overlays = {
