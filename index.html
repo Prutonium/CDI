@@ -523,8 +523,8 @@ L.marker([33.6138, -84.386465]).bindPopup("<b>Polynt-Reichhold Group</b><br />UP
 	    wmsUrl = 'https://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WMSServer';
 	
 	
-	var Florence = L.tileLayer.wms(wmsUrl, {
-		layers:[2,3,6,7,8],
+	var Storm = L.tileLayer.wms(wmsUrl, {
+		layers:[2,3,4,6,7,8,9,10],
 		format: 'image/png',
 		transparent: true,
 		opacity: 0.8,
@@ -547,7 +547,7 @@ L.marker([33.6138, -84.386465]).bindPopup("<b>Polynt-Reichhold Group</b><br />UP
 	};
 	
 	var overlays = {
-		"Storms" : Florence,
+		"Storms" : Storm,
 		"Styrene" : Styrene,
 		"RGP" : RGP,
 "CGP" : CGP,
