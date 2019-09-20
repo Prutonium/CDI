@@ -1226,6 +1226,7 @@ L.marker([28.9657463, -95.3541353]).bindPopup("<b>DowDupont</b><br />Polyethylen
 	    });	
 	
 	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
+	    Satellite = L.tileLayer(mbUrl, {id: 'mapbox.satellite', attribution: mbAttr}),
 	    streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
 	
 	var map = L.map('map', {
@@ -1237,6 +1238,7 @@ L.marker([28.9657463, -95.3541353]).bindPopup("<b>DowDupont</b><br />Polyethylen
 	
 	var baseLayers = {
 		"Streets": streets,
+		"Satellite" : satellite,
 		"Greyscale": grayscale
 	};
 	
